@@ -8,8 +8,8 @@ const { isAdmin } = require("../middlewares/adminMiddleware");
 // URL: POST /api/auth/register
 router.post(
   "/create-category",
-  protect,
-  isAdmin,
+  // protect,
+  // isAdmin,
   upload.single("image"),
   categoryControllers.createCategory,
 );
