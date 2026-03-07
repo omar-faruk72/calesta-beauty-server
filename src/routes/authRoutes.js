@@ -14,6 +14,6 @@ router.get("/all-users", authMiddleware.protect, adminMiddlwarre.isAdmin, userCo
 
 router.get("/logged-user", authMiddleware.protect, userControllers.getLoggedUser);
 
-router.get("/logout", userControllers.logout)
+router.post("/logout", userControllers.logout)
 
 module.exports = router;
