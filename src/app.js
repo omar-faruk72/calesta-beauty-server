@@ -13,7 +13,7 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: ["http://localhost:5173","https://calesta-beauty.vercel.app"],
+    origin: ["http://localhost:5173","https://calesta-beauty.vercel.app", "https://calesta-glow.vercel.app"],
     credentials: true,
   }),
 );
