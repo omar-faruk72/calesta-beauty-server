@@ -7,7 +7,7 @@ const categoryRoutes = require("./routes/categoryRoutes");
 const productRoutes = require("./routes/productRoutes");
 const orderRoutes = require("./routes/orderRoutes");
 const reviewRoutes = require("./routes/reviewRoutes");
-
+const shippingRoutes = require("./routes/shippingRoutes");
 const app = express();
 
 // Middleware
@@ -36,5 +36,8 @@ app.use("/api", categoryRoutes);
 app.use("/api", productRoutes);
 app.use("/api/payment", orderRoutes);
 app.use("/api/reviews", reviewRoutes);
+
+// মিডলওয়্যার গুলোর নিচে এটি বসান
+app.use("/api/shipping", shippingRoutes);
 
 module.exports = app;
