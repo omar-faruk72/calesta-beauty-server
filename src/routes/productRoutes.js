@@ -12,7 +12,7 @@ const productUpload = upload.fields([
 ]);
 
 
-router.post("/create-product", protect, isAdmin,  productUpload, productContollers.createProduct);
+router.post("/create-product", productUpload, productContollers.createProduct);
 router.get("/product/:id", productContollers.getProductDetails)
 router.get("/products",  productContollers.getAllProducts)
 router.delete("/product-delete/:id", protect, isAdmin, productContollers.deleteProduct)
